@@ -6,7 +6,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BargainMagic.Api.Service", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BargainMagic.Api.Core", "src\BargainMagic.Api.Core\BargainMagic.Api.Core.csproj", "{36965E18-8BA7-499F-BC8B-E56B5E770EFE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BargainMagic.Api.Abstractions", "src\BargainMagic.Api.Abstractions\BargainMagic.Api.Abstractions.csproj", "{3A415DE7-16CD-4087-8C85-B1C3633975C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BargainMagic.Api.Abstractions", "src\BargainMagic.Api.Abstractions\BargainMagic.Api.Abstractions.csproj", "{CD1EB4D4-8ABA-4311-AE9A-658CBEEF588A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +22,10 @@ Global
 		{36965E18-8BA7-499F-BC8B-E56B5E770EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36965E18-8BA7-499F-BC8B-E56B5E770EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36965E18-8BA7-499F-BC8B-E56B5E770EFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A415DE7-16CD-4087-8C85-B1C3633975C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A415DE7-16CD-4087-8C85-B1C3633975C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A415DE7-16CD-4087-8C85-B1C3633975C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A415DE7-16CD-4087-8C85-B1C3633975C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1EB4D4-8ABA-4311-AE9A-658CBEEF588A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1EB4D4-8ABA-4311-AE9A-658CBEEF588A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1EB4D4-8ABA-4311-AE9A-658CBEEF588A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1EB4D4-8ABA-4311-AE9A-658CBEEF588A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
