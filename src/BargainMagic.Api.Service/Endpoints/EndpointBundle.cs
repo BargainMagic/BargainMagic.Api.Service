@@ -4,7 +4,7 @@ namespace BargainMagic.Api.Service.Endpoints;
 
 public static class EndpointBundle
 {
-    public static void MapEndpoints(IEndpointRouteBuilder endpointRouteBuilder)
+    public static void MapEndpoints(this IEndpointRouteBuilder endpointRouteBuilder)
     {
         SeasonEndpointGroup.MapEndpoints(endpointRouteBuilder);
     }

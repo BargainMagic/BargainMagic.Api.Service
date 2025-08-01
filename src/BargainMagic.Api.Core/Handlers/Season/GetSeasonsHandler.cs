@@ -1,21 +1,24 @@
 ﻿using BargainMagic.Api.Abstractions.Endpoints.Season;
 using BargainMagic.Api.Abstractions.Handlers.Season;
+using BargainMagic.Api.Core.Mappers;
+using BargainMagic.Data.Abstractions.Repositories;
 
 namespace BargainMagic.Api.Core.Handlers.Season;
 
 public class GetSeasonsHandler : IGetSeasonsHandler
 {
-    public async Task<List<SeasonDto>> HandleGetSeasonsRequest()
+    private readonly ISeasonRepository seasonRepository;
+
+    public GetSeasonsHandler(ISeasonRepository seasonRepository)
     {
-        // TODO: This should pull from a data store.
-        return new List<SeasonDto>
-               {
-                   new SeasonDto(name: "TestSeason01",
-                                 createdDateTime: DateTime.UtcNow.Subtract(TimeSpan.FromHours(96))),
-                   new SeasonDto(name: "TestSeason02",
-                                 createdDateTime: DateTime.UtcNow.Subtract(TimeSpan.FromHours(48))),
-                   new SeasonDto(name: "TestSeason03",
-                                 createdDateTime: DateTime.UtcNow),
-               };
+        this.seasonRepository = seasonRepository;
+    }
+
+    public async Task<List<SeasonDto>> HandleGetSeasonsRequest(CancellationToken cancellationToken = default)
+    {
+        var seasons = await this.seasonRepository.GetSeasons(cancellationToken);
+
+        return seasons.Select(s => s.ToSeasonDto())
+                      .ToList();
     }
 }
