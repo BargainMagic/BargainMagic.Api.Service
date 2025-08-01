@@ -10,6 +10,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDataServices();
 
+builder.Services.AddSingleton<ICreateSeasonHandler, CreateSeasonHandler>();
 builder.Services.AddSingleton<IGetSeasonsHandler, GetSeasonsHandler>();
 
 var app = builder.Build();

@@ -11,7 +11,7 @@ public static class GetSeasonsEndpoint
     public static async Task<Results<Ok<List<SeasonDto>>, BadRequest>> ProcessGetSeasonsRequest(IGetSeasonsHandler getSeasonsHandler,
                                                                                                 CancellationToken cancellationToken)
     {
-        var seasons = await getSeasonsHandler.HandleGetSeasonsRequest();
+        var seasons = await getSeasonsHandler.HandleGetSeasonsRequest(cancellationToken);
 
         return TypedResults.Ok(seasons);
     }

@@ -8,6 +8,7 @@ public static class SeasonEndpointGroup
     {
         var seasonEndpointGroup = endpointRouteBuilder.MapGroup(SeasonEndpointGroupRoute);
 
+        CreateSeasonEndpoint.MapEndpoint(seasonEndpointGroup);
         GetSeasonsEndpoint.MapEndpoint(seasonEndpointGroup);
     }
 }
