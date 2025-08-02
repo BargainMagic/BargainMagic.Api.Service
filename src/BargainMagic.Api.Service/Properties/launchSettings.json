@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "BargainMagic.Api.Service": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:56297;http://localhost:56298"
+    }
+  }
+}
