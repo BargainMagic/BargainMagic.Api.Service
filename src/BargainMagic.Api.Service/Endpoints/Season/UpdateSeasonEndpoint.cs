@@ -1,4 +1,5 @@
-﻿using BargainMagic.Api.Abstractions.Endpoints.Season;
+﻿using BargainMagic.Api.Abstractions;
+using BargainMagic.Api.Abstractions.Endpoints.Season;
 using BargainMagic.Api.Abstractions.Endpoints.Season.Requests;
 using BargainMagic.Api.Abstractions.Handlers.Season;
 
@@ -10,11 +11,20 @@ public class UpdateSeasonEndpoint
 {
     private const string UpdateSeasonEndpointRoute = "/{seasonId}";
 
-    public static async Task<Results<Ok<SeasonDto>, NotFound>> ProcessUpdateSeasonRequest(long seasonId,
-                                                                                          UpdateSeasonRequest updateSeasonRequest,
-                                                                                          IUpdateSeasonHandler updateSeasonHandler,
-                                                                                          CancellationToken cancellationToken)
+    public static async Task<Results<Ok<SeasonDto>, BadRequest<string>, NotFound>> ProcessUpdateSeasonRequest(long seasonId,
+                                                                                                              UpdateSeasonRequest updateSeasonRequest,
+                                                                                                              IApiRequestValidator<UpdateSeasonRequest> apiRequestValidator,
+                                                                                                              IUpdateSeasonHandler updateSeasonHandler,
+                                                                                                              CancellationToken cancellationToken)
     {
+        var requestValidation = await apiRequestValidator.ValidateRequest(updateSeasonRequest,
+                                                                          cancellationToken);
+
+        if (!requestValidation.IsSuccessful)
+        {
+            return TypedResults.BadRequest(requestValidation.FailureReason);
+        }
+
         var updatedSeasonDto = await updateSeasonHandler.HandleUpdateSeasonRequest(seasonId,
                                                                                    updateSeasonRequest,
                                                                                    cancellationToken);

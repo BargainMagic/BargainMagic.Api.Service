@@ -1,5 +1,8 @@
+using BargainMagic.Api.Abstractions;
+using BargainMagic.Api.Abstractions.Endpoints.Season.Requests;
 using BargainMagic.Api.Abstractions.Handlers.Season;
 using BargainMagic.Api.Core.Handlers.Season;
+using BargainMagic.Api.Core.RequestValidators.Season;
 using BargainMagic.Api.Service.Endpoints;
 using BargainMagic.Data.Core;
 
@@ -9,6 +12,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDataServices();
+
+builder.Services.AddTransient<IApiRequestValidator<CreateSeasonRequest>, CreateSeasonRequestValidator>();
+builder.Services.AddTransient<IApiRequestValidator<UpdateSeasonRequest>, UpdateSeasonRequestValidator>();
 
 builder.Services.AddSingleton<ICreateSeasonHandler, CreateSeasonHandler>();
 builder.Services.AddSingleton<IDeleteSeasonHandler, DeleteSeasonHandler>();

@@ -12,11 +12,12 @@ public class CreateSeasonEndpoint
     private const string CreateSeasonEndpointRoute = "/";
 
     public static async Task<Results<Ok<SeasonDto>, BadRequest<string>>> ProcessCreateSeasonRequest(CreateSeasonRequest createSeasonRequest,
+                                                                                                    IApiRequestValidator<CreateSeasonRequest> apiRequestValidator,
                                                                                                     ICreateSeasonHandler createSeasonsHandler,
                                                                                                     CancellationToken cancellationToken)
     {
-        var requestValidation = await ValidateCreateSeasonRequest(createSeasonRequest,
-                                                                  cancellationToken);
+        var requestValidation = await apiRequestValidator.ValidateRequest(createSeasonRequest,
+                                                                          cancellationToken);
 
         if (!requestValidation.IsSuccessful)
         {
@@ -38,16 +39,5 @@ public class CreateSeasonEndpoint
     {
         endpointRouteBuilder.MapPost(CreateSeasonEndpointRoute,
                                      ProcessCreateSeasonRequest);
-    }
-
-    private static async Task<ApiRequestValidationResult> ValidateCreateSeasonRequest(CreateSeasonRequest createSeasonRequest,
-                                                                                      CancellationToken cancellationToken)
-    {
-        if (string.IsNullOrWhiteSpace(createSeasonRequest.Name))
-        {
-            return ApiRequestValidationResult.FailureResult("Season name must be provided.");
-        }
-
-        return ApiRequestValidationResult.SuccessResult();
     }
 }
