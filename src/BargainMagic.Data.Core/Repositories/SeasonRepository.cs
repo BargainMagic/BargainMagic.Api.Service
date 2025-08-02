@@ -24,6 +24,20 @@ public class SeasonRepository : ISeasonRepository
     }
 
     /// <inheritdoc/>
+    public async Task DeleteSeason(long seasonId,
+                                   CancellationToken cancellationToken)
+    {
+        var seasonToDelete = seasons.FirstOrDefault(s => s.Id == seasonId);
+
+        if (seasonToDelete is null)
+        {
+            return;
+        }
+
+        seasons.Remove(seasonToDelete);
+    }
+
+    /// <inheritdoc/>
     public async Task<List<Season>> GetSeasons(CancellationToken cancellationToken)
     {
         return seasons;

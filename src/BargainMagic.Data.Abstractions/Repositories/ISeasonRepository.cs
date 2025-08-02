@@ -14,6 +14,15 @@ public interface ISeasonRepository
                                      CancellationToken cancellationToken);
 
     /// <summary>
+    /// Deletes a <see cref="Season"/> entity with the given identifier in the data store.
+    /// </summary>
+    /// <param name="seasonId"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns></returns>
+    public Task DeleteSeason(long seasonId,
+                             CancellationToken cancellationToken);
+
+    /// <summary>
     /// Gets all <see cref="Season"/> entities from the data store.
     /// </summary>
     /// <param name="cancellationToken"></param>
