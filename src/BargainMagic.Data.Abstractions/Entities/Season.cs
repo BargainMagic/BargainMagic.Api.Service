@@ -8,12 +8,16 @@ public class Season
 
     public DateTime CreatedDateTime { get; set; }
 
+    public string Description { get; set; }
+
     public Season(long id, 
                   string name,
-                  DateTime createdDateTime)
+                  DateTime createdDateTime,
+                  string description)
     {
         Id = id;
-        Name = name; 
+        Name = name;
         CreatedDateTime = createdDateTime;
+        Description = description;
     }
 }

@@ -9,8 +9,9 @@ public interface ISeasonRepository
     /// </summary>
     /// <param name="name"></param>
     /// <param name="cancellationToken"></param>
-    /// <returns></returns>
+    /// <returns>The created season entity.</returns>
     public Task<Season> CreateSeason(string name,
+                                     string description,
                                      CancellationToken cancellationToken);
 
     /// <summary>
@@ -18,7 +19,6 @@ public interface ISeasonRepository
     /// </summary>
     /// <param name="seasonId"></param>
     /// <param name="cancellationToken"></param>
-    /// <returns></returns>
     public Task DeleteSeason(long seasonId,
                              CancellationToken cancellationToken);
 
@@ -26,6 +26,18 @@ public interface ISeasonRepository
     /// Gets all <see cref="Season"/> entities from the data store.
     /// </summary>
     /// <param name="cancellationToken"></param>
-    /// <returns></returns>
+    /// <returns>The collection of stored seasons.</returns>
     public Task<List<Season>> GetSeasons(CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Updates the customizable values of a specific season.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <param name="description"></param>
+    /// <param name="cancellationToken"></param>
+    /// <returns>The updated season entity.</returns>
+    public Task<Season?> UpdateSeason(long seasonId,
+                                      string name,
+                                      string description,
+                                      CancellationToken cancellationToken);
 }

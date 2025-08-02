@@ -17,12 +17,19 @@ public record SeasonDto
     /// </summary>
     public DateTime CreatedDate { get; set; }
 
+    /// <summary>
+    /// A description for the season.
+    /// </summary>
+    public string Description { get; set; }
+
     public SeasonDto(long id,
                      string name,
+                     string description,
                      DateTime createdDateTime)
     {
         Id = id;
         Name = name;
         CreatedDate = createdDateTime;
+        Description = description;
     }
 }

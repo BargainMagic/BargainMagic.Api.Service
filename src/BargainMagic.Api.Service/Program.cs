@@ -13,6 +13,7 @@ builder.Services.AddDataServices();
 builder.Services.AddSingleton<ICreateSeasonHandler, CreateSeasonHandler>();
 builder.Services.AddSingleton<IDeleteSeasonHandler, DeleteSeasonHandler>();
 builder.Services.AddSingleton<IGetSeasonsHandler, GetSeasonsHandler>();
+builder.Services.AddSingleton<IUpdateSeasonHandler, UpdateSeasonHandler>();
 
 var app = builder.Build();
 

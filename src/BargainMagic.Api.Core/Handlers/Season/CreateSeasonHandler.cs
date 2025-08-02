@@ -19,6 +19,7 @@ public class CreateSeasonHandler : ICreateSeasonHandler
                                                             CancellationToken cancellationToken)
     {
         var season = await this.seasonRepository.CreateSeason(createSeasonRequest.Name,
+                                                              createSeasonRequest.Description,
                                                               cancellationToken);
 
         return season?.ToSeasonDto();

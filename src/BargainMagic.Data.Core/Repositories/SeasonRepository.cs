@@ -12,11 +12,13 @@ public class SeasonRepository : ISeasonRepository
 
     /// <inheritdoc/>
     public async Task<Season> CreateSeason(string name,
+                                           string description,
                                            CancellationToken cancellationToken)
     {
         var season = new Season(id: ++currentId,
                                 name: name,
-                                createdDateTime: DateTime.UtcNow);
+                                createdDateTime: DateTime.UtcNow,
+                                description: description);
 
         seasons.Add(season);
 
@@ -41,5 +43,24 @@ public class SeasonRepository : ISeasonRepository
     public async Task<List<Season>> GetSeasons(CancellationToken cancellationToken)
     {
         return seasons;
+    }
+
+    /// <inheritdoc/>
+    public async Task<Season?> UpdateSeason(long seasonId,
+                                            string name,
+                                            string description,
+                                            CancellationToken cancellationToken)
+    {
+        var seasonToUpdate = seasons.FirstOrDefault(s => s.Id == seasonId);
+
+        if (seasonToUpdate is null)
+        {
+            return null;
+        }
+
+        seasonToUpdate.Name = name;
+        seasonToUpdate.Description = description;
+
+        return seasonToUpdate;
     }
 }

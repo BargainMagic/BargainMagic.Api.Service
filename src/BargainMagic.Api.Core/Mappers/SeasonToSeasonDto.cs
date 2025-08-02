@@ -9,6 +9,7 @@ public static class SeasonToSeasonDto
     {
         return new SeasonDto(id: season.Id,
                              name: season.Name,
-                             createdDateTime: season.CreatedDateTime);
+                             createdDateTime: season.CreatedDateTime,
+                             description: season.Description);
     }
 }

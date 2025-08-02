@@ -11,5 +11,6 @@ public static class SeasonEndpointGroup
         CreateSeasonEndpoint.MapEndpoint(seasonEndpointGroup);
         DeleteSeasonEndpoint.MapEndpoint(seasonEndpointGroup);
         GetSeasonsEndpoint.MapEndpoint(seasonEndpointGroup);
+        UpdateSeasonEndpoint.MapEndpoint(seasonEndpointGroup);
     }
 }
