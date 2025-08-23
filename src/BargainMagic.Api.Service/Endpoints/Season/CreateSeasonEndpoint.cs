@@ -14,7 +14,7 @@ public class CreateSeasonEndpoint
     public static async Task<Results<Ok<SeasonDto>, BadRequest<string>>> ProcessCreateSeasonRequest(CreateSeasonRequest createSeasonRequest,
                                                                                                     IApiRequestValidator<CreateSeasonRequest> apiRequestValidator,
                                                                                                     ICreateSeasonHandler createSeasonsHandler,
-                                                                                                    CancellationToken cancellationToken)
+                                                                                                    CancellationToken cancellationToken = default)
     {
         var requestValidation = await apiRequestValidator.ValidateRequest(createSeasonRequest,
                                                                           cancellationToken);
