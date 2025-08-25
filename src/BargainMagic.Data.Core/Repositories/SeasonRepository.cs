@@ -13,12 +13,16 @@ public class SeasonRepository : ISeasonRepository
     /// <inheritdoc/>
     public async Task<Season> CreateSeason(string name,
                                            string description,
-                                           CancellationToken cancellationToken)
+                                           int captureType,
+                                           CancellationToken cancellationToken = default)
     {
-        var season = new Season(id: ++currentId,
-                                name: name,
-                                createdDateTime: DateTime.UtcNow,
-                                description: description);
+        var season = new Season
+                     {
+                         Id = ++currentId,
+                         Name = name,
+                         CreatedDateTime = DateTime.UtcNow,
+                         Description = description
+                     };
 
         seasons.Add(season);
 
@@ -27,7 +31,7 @@ public class SeasonRepository : ISeasonRepository
 
     /// <inheritdoc/>
     public async Task DeleteSeason(long seasonId,
-                                   CancellationToken cancellationToken)
+                                   CancellationToken cancellationToken = default)
     {
         var seasonToDelete = seasons.FirstOrDefault(s => s.Id == seasonId);
 
@@ -40,16 +44,18 @@ public class SeasonRepository : ISeasonRepository
     }
 
     /// <inheritdoc/>
-    public async Task<List<Season>> GetSeasons(CancellationToken cancellationToken)
+    public async Task<List<Season>> GetSeasons(CancellationToken cancellationToken = default)
     {
         return seasons;
     }
 
+    // TODO: Once this is an actual data store, the CardSnapshot should only be the card snapshot identifier.
     /// <inheritdoc/>
     public async Task<Season?> UpdateSeason(long seasonId,
-                                            string name,
-                                            string description,
-                                            CancellationToken cancellationToken)
+                                            string? name = null,
+                                            string? description = null,
+                                            CardSnapshot? cardSnapshot = null,
+                                            CancellationToken cancellationToken = default)
     {
         var seasonToUpdate = seasons.FirstOrDefault(s => s.Id == seasonId);
 
@@ -58,8 +64,21 @@ public class SeasonRepository : ISeasonRepository
             return null;
         }
 
-        seasonToUpdate.Name = name;
-        seasonToUpdate.Description = description;
+        if (name is not null)
+        {
+            seasonToUpdate.Name = name;
+        }
+
+        if (description is not null)
+        {
+            seasonToUpdate.Description = description;
+        }
+
+        if (cardSnapshot is not null)
+        {
+            seasonToUpdate.CardSnapshotId = cardSnapshot?.Id;
+            seasonToUpdate.CardSnapshot = cardSnapshot;
+        }
 
         return seasonToUpdate;
     }

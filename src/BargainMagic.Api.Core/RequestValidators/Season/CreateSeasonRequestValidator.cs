@@ -7,7 +7,7 @@ namespace BargainMagic.Api.Core.RequestValidators.Season
     {
         /// <inheritdoc/>
         public async Task<ApiRequestValidationResult> ValidateRequest(CreateSeasonRequest request,
-                                                                      CancellationToken cancellationToken)
+                                                                      CancellationToken cancellationToken = default)
         {
             if (string.IsNullOrWhiteSpace(request.Name))
             {

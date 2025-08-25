@@ -15,7 +15,7 @@ public class UpdateSeasonEndpoint
                                                                                                               UpdateSeasonRequest updateSeasonRequest,
                                                                                                               IApiRequestValidator<UpdateSeasonRequest> apiRequestValidator,
                                                                                                               IUpdateSeasonHandler updateSeasonHandler,
-                                                                                                              CancellationToken cancellationToken)
+                                                                                                              CancellationToken cancellationToken = default)
     {
         var requestValidation = await apiRequestValidator.ValidateRequest(updateSeasonRequest,
                                                                           cancellationToken);

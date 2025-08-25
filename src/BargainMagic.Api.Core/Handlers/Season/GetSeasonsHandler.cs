@@ -14,7 +14,8 @@ public class GetSeasonsHandler : IGetSeasonsHandler
         this.seasonRepository = seasonRepository;
     }
 
-    public async Task<List<SeasonDto>> HandleGetSeasonsRequest(CancellationToken cancellationToken)
+    /// <inheritdoc/>
+    public async Task<List<SeasonDto>> HandleGetSeasonsRequest(CancellationToken cancellationToken = default)
     {
         var seasons = await this.seasonRepository.GetSeasons(cancellationToken);
 

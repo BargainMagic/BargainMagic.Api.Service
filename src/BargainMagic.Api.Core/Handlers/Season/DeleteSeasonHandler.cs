@@ -12,8 +12,9 @@ public class DeleteSeasonHandler : IDeleteSeasonHandler
         this.seasonRepository = seasonRepository;
     }
 
+    /// <inheritdoc/>
     public async Task HandleDeleteSeasonRequest(long seasonId,
-                                                CancellationToken cancellationToken)
+                                                CancellationToken cancellationToken = default)
     {
         await this.seasonRepository.DeleteSeason(seasonId,
                                                  cancellationToken);

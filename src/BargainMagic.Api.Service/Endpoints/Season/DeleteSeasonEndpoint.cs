@@ -10,7 +10,7 @@ public class DeleteSeasonEndpoint
 
     public static async Task<Ok> ProcessDeleteSeasonRequest(long seasonId,
                                                             IDeleteSeasonHandler deleteSeasonHandler,
-                                                            CancellationToken cancellationToken)
+                                                            CancellationToken cancellationToken = default)
     {
         await deleteSeasonHandler.HandleDeleteSeasonRequest(seasonId,
                                                             cancellationToken);

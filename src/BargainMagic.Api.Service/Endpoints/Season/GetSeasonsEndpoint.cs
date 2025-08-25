@@ -9,7 +9,7 @@ public static class GetSeasonsEndpoint
     private const string GetSeasonsEndpointRoute = "/";
 
     public static async Task<Results<Ok<List<SeasonDto>>, BadRequest>> ProcessGetSeasonsRequest(IGetSeasonsHandler getSeasonsHandler,
-                                                                                                CancellationToken cancellationToken)
+                                                                                                CancellationToken cancellationToken = default)
     {
         var seasons = await getSeasonsHandler.HandleGetSeasonsRequest(cancellationToken);
 

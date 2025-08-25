@@ -1,7 +1,17 @@
 ﻿namespace BargainMagic.Api.Abstractions.Endpoints.Season.Requests;
 
-public record CreateSeasonRequest
+/// <summary>
+/// Request parameters for the UpdateSeason endpoint.
+/// </summary>
+public record UpdateSeasonRequest
 {
-    public string Name { get; set; } = string.Empty;
-    public string Description { get; set; } = string.Empty;
+    /// <summary>
+    /// The updated readable identifier for the season. No updates will be applied if the property is null.
+    /// </summary>
+    public string? Name { get; set; }
+
+    /// <summary>
+    /// The updated description of the season. No updates will be applied if the property is null.
+    /// </summary>
+    public string? Description { get; set; }
 }
