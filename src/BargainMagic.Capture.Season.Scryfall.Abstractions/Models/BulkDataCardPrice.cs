@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BargainMagic.Capture.Scryfall.Abstractions.Models;
+namespace BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
 /// <summary>
 /// A model of pricing data of a given card.

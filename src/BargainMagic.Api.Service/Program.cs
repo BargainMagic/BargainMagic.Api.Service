@@ -1,6 +1,6 @@
 using BargainMagic.Api.Core;
 using BargainMagic.Api.Service.Endpoints;
-using BargainMagic.Capture.Core;
+using BargainMagic.Capture.Season.Core;
 using BargainMagic.Data.Core;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDataServices();
 
-builder.Services.AddCaptureServices();
+builder.Services.AddSeasonCaptureServices();
 
 builder.Services.AddApiServices();
 

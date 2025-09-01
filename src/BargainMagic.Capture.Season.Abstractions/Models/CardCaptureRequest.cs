@@ -1,6 +1,6 @@
 ﻿using BargainMagic.Data.Abstractions.Enumerations;
 
-namespace BargainMagic.Capture.Abstractions.Models;
+namespace BargainMagic.Capture.Season.Abstractions.Models;
 
 /// <summary>
 /// Request parameters for an <see cref="ICardCaptureQueue"/> to store for sequential processing.

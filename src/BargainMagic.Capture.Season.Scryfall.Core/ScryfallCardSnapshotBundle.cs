@@ -1,9 +1,9 @@
-﻿using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Scryfall.Abstractions;
+﻿using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BargainMagic.Capture.Scryfall.Core;
+namespace BargainMagic.Capture.Season.Scryfall.Core;
 
 /// <summary>
 /// A static dependency helper bundling dependencies specific to the BargainMagic Scryfall Card Snapshot projects.

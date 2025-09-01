@@ -1,6 +1,6 @@
-﻿using BargainMagic.Capture.Scryfall.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
-namespace BargainMagic.Capture.Scryfall.Abstractions.Extensions;
+namespace BargainMagic.Capture.Season.Scryfall.Abstractions.Extensions;
 
 /// <summary>
 /// Extension methods for a <see cref="BulkDataCardPrice"/>.

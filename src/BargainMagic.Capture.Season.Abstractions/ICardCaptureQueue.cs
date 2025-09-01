@@ -1,6 +1,6 @@
-﻿using BargainMagic.Capture.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Abstractions.Models;
 
-namespace BargainMagic.Capture.Abstractions;
+namespace BargainMagic.Capture.Season.Abstractions;
 
 /// <summary>
 /// Interface for <see cref="CardCaptureRequest"/> storage and processing implementations.

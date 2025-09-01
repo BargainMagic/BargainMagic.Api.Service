@@ -1,9 +1,9 @@
-﻿using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Abstractions.Models;
 
 using System.Threading.Channels;
 
-namespace BargainMagic.Capture.Core;
+namespace BargainMagic.Capture.Season.Core;
 
 public class CardCaptureQueue : ICardCaptureQueue
 {

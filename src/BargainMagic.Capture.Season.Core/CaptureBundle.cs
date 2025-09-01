@@ -1,13 +1,13 @@
-﻿using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Scryfall.Core;
+﻿using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Core;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BargainMagic.Capture.Core;
+namespace BargainMagic.Capture.Season.Core;
 
 public static class CaptureBundle
 {
-    public static void AddCaptureServices(this IServiceCollection serviceCollection)
+    public static void AddSeasonCaptureServices(this IServiceCollection serviceCollection)
     {
         // SeasonSnapshotCollectors
         serviceCollection.AddScryfallCardSnapshotServices();

@@ -9,12 +9,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.7" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BargainMagic.Capture.Abstractions\BargainMagic.Capture.Abstractions.csproj" />
-    <ProjectReference Include="..\BargainMagic.Capture.Scryfall.Core\BargainMagic.Capture.Scryfall.Core.csproj" />
+    <ProjectReference Include="..\BargainMagic.Capture.Season.Abstractions\BargainMagic.Capture.Season.Abstractions.csproj" />
+    <ProjectReference Include="..\BargainMagic.Capture.Season.Scryfall.Abstractions\BargainMagic.Capture.Season.Scryfall.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

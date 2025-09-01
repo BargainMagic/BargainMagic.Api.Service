@@ -1,10 +1,10 @@
-﻿using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Scryfall.Core;
+﻿using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Core;
 using BargainMagic.Data.Abstractions.Enumerations;
 
 using Microsoft.Extensions.DependencyInjection;
 
-namespace BargainMagic.Capture.Core;
+namespace BargainMagic.Capture.Season.Core;
 
 public class CardSnapshotCollectorProvider(IServiceProvider serviceProvider) : ICardSnapshotCollectorProvider
 {

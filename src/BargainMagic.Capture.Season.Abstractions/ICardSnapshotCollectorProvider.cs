@@ -1,6 +1,6 @@
 ﻿using BargainMagic.Data.Abstractions.Enumerations;
 
-namespace BargainMagic.Capture.Abstractions;
+namespace BargainMagic.Capture.Season.Abstractions;
 
 /// <summary>
 /// Interface for classes that retrieve a specific <see cref="ICardSnapshotCollector"/>.

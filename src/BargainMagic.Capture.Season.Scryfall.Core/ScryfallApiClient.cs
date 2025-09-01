@@ -1,9 +1,9 @@
-﻿using BargainMagic.Capture.Scryfall.Abstractions;
-using BargainMagic.Capture.Scryfall.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Scryfall.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
 using System.Net.Http.Json;
 
-namespace BargainMagic.Capture.Scryfall.Core;
+namespace BargainMagic.Capture.Season.Scryfall.Core;
 
 public class ScryfallApiClient : IScryfallApiClient
 {

@@ -1,7 +1,7 @@
 ﻿using BargainMagic.Data.Abstractions.Entities;
 using BargainMagic.Data.Abstractions.Enumerations;
 
-namespace BargainMagic.Capture.Abstractions;
+namespace BargainMagic.Capture.Season.Abstractions;
 
 /// <summary>
 /// Interface for classes to utilize services based on <see cref="CardCaptureType"/> to retrieve a snapshot of card data.

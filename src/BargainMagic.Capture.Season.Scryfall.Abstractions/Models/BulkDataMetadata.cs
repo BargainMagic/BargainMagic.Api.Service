@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BargainMagic.Capture.Scryfall.Abstractions.Models;
+namespace BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
 /// <summary>
 /// Response from the Scryfall API GET /bulk-data/:type endpoint. Used to collect identifying information on the 

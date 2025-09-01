@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BargainMagic.Api.Abstractions\BargainMagic.Api.Abstractions.csproj" />
-    <ProjectReference Include="..\BargainMagic.Capture.Abstractions\BargainMagic.Capture.Abstractions.csproj" />
+    <ProjectReference Include="..\BargainMagic.Capture.Season.Abstractions\BargainMagic.Capture.Season.Abstractions.csproj" />
     <ProjectReference Include="..\BargainMagic.Data.Abstractions\BargainMagic.Data.Abstractions.csproj" />
   </ItemGroup>
 

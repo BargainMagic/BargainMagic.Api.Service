@@ -2,8 +2,8 @@
 using BargainMagic.Api.Abstractions.Endpoints.Season.Requests;
 using BargainMagic.Api.Abstractions.Handlers.Season;
 using BargainMagic.Api.Core.Mappers;
-using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Abstractions.Models;
+using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Abstractions.Models;
 using BargainMagic.Data.Abstractions.Enumerations;
 using BargainMagic.Data.Abstractions.Repositories;
 
@@ -37,7 +37,7 @@ public class CreateSeasonHandler : ICreateSeasonHandler
                                                             seasonCaptureType);
 
         await this.seasonCaptureQueue.QueueCardCapture(seasonCaptureRequest,
-                                                         cancellationToken);
+                                                       cancellationToken);
 
         return season?.ToSeasonDto();
     }

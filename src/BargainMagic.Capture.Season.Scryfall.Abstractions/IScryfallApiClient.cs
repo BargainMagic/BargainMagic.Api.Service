@@ -1,6 +1,6 @@
-﻿using BargainMagic.Capture.Scryfall.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
-namespace BargainMagic.Capture.Scryfall.Abstractions;
+namespace BargainMagic.Capture.Season.Scryfall.Abstractions;
 
 public interface IScryfallApiClient
 {

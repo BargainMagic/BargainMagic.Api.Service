@@ -1,9 +1,9 @@
-﻿using BargainMagic.Capture.Abstractions;
+﻿using BargainMagic.Capture.Season.Abstractions;
 using BargainMagic.Data.Abstractions.Repositories;
 
 using Microsoft.Extensions.Hosting;
 
-namespace BargainMagic.Capture.Core;
+namespace BargainMagic.Capture.Season.Core;
 
 public class CaptureService : BackgroundService
 {

@@ -16,15 +16,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Data.Abstracti
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Capture", "Capture", "{89306C9A-7404-4CC5-99BD-E466A5A0A165}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Abstractions", "src\BargainMagic.Capture.Abstractions\BargainMagic.Capture.Abstractions.csproj", "{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Core", "src\BargainMagic.Capture.Core\BargainMagic.Capture.Core.csproj", "{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scryfall", "Scryfall", "{39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Scryfall.Abstractions", "src\BargainMagic.Capture.Scryfall.Abstractions\BargainMagic.Capture.Scryfall.Abstractions.csproj", "{FB65D3F5-D304-67D6-8179-C398B22A37AF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Seasons", "Seasons", "{B7E9B445-0961-40A0-A12E-9C697706D1C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Scryfall.Core", "src\BargainMagic.Capture.Scryfall.Core\BargainMagic.Capture.Scryfall.Core.csproj", "{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Season.Scryfall.Abstractions", "src\BargainMagic.Capture.Season.Scryfall.Abstractions\BargainMagic.Capture.Season.Scryfall.Abstractions.csproj", "{E08756D7-75EC-4DEC-CDE2-F0C1379648F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Season.Scryfall.Core", "src\BargainMagic.Capture.Season.Scryfall.Core\BargainMagic.Capture.Season.Scryfall.Core.csproj", "{3DF90BD4-2ED6-D013-040D-931EF8C82D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Season.Abstractions", "src\BargainMagic.Capture.Season.Abstractions\BargainMagic.Capture.Season.Abstractions.csproj", "{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BargainMagic.Capture.Season.Core", "src\BargainMagic.Capture.Season.Core\BargainMagic.Capture.Season.Core.csproj", "{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,22 +54,22 @@ Global
 		{B084832D-7B14-456C-9EB5-A0E7C315805A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B084832D-7B14-456C-9EB5-A0E7C315805A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B084832D-7B14-456C-9EB5-A0E7C315805A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB65D3F5-D304-67D6-8179-C398B22A37AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB65D3F5-D304-67D6-8179-C398B22A37AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB65D3F5-D304-67D6-8179-C398B22A37AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB65D3F5-D304-67D6-8179-C398B22A37AF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08756D7-75EC-4DEC-CDE2-F0C1379648F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08756D7-75EC-4DEC-CDE2-F0C1379648F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08756D7-75EC-4DEC-CDE2-F0C1379648F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08756D7-75EC-4DEC-CDE2-F0C1379648F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF90BD4-2ED6-D013-040D-931EF8C82D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF90BD4-2ED6-D013-040D-931EF8C82D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF90BD4-2ED6-D013-040D-931EF8C82D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF90BD4-2ED6-D013-040D-931EF8C82D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,11 +77,12 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{9A97D5D5-9FC8-4820-AC7C-7BB3F989E650} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B084832D-7B14-456C-9EB5-A0E7C315805A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
-		{3A2CB52C-57C3-4E8F-B2A1-9806A90BC911} = {89306C9A-7404-4CC5-99BD-E466A5A0A165}
-		{ECC2B2F6-68F5-4FF4-AE51-805E40A6C4B0} = {89306C9A-7404-4CC5-99BD-E466A5A0A165}
-		{39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4} = {89306C9A-7404-4CC5-99BD-E466A5A0A165}
-		{FB65D3F5-D304-67D6-8179-C398B22A37AF} = {39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4}
-		{CC84C827-EB15-EF1D-A6D7-BDCEA5E182CB} = {39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4}
+		{39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4} = {B7E9B445-0961-40A0-A12E-9C697706D1C7}
+		{B7E9B445-0961-40A0-A12E-9C697706D1C7} = {89306C9A-7404-4CC5-99BD-E466A5A0A165}
+		{E08756D7-75EC-4DEC-CDE2-F0C1379648F1} = {39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4}
+		{3DF90BD4-2ED6-D013-040D-931EF8C82D11} = {39E2A569-C7DB-4AFD-963A-9E00DEC6ABE4}
+		{9AA6C4DD-47F4-7C74-7A90-0BEE71239DF7} = {B7E9B445-0961-40A0-A12E-9C697706D1C7}
+		{460D4EEB-BB69-B137-EDA6-8E8D17BE12F6} = {B7E9B445-0961-40A0-A12E-9C697706D1C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {329C144D-F2C5-4EEA-9581-983A560644E3}

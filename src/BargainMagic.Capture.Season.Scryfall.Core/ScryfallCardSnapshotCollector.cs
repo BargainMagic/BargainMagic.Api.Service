@@ -1,15 +1,15 @@
-﻿using BargainMagic.Capture.Abstractions;
-using BargainMagic.Capture.Scryfall.Abstractions;
-using BargainMagic.Capture.Scryfall.Abstractions.Extensions;
-using BargainMagic.Capture.Scryfall.Abstractions.Models;
-using BargainMagic.Capture.Scryfall.Core.Mappers;
+﻿using BargainMagic.Capture.Season.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions.Extensions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
+using BargainMagic.Capture.Season.Scryfall.Core.Mappers;
 using BargainMagic.Data.Abstractions.Entities;
 using BargainMagic.Data.Abstractions.Enumerations;
 using BargainMagic.Data.Abstractions.Repositories;
 
 using System.Text.Json;
 
-namespace BargainMagic.Capture.Scryfall.Core;
+namespace BargainMagic.Capture.Season.Scryfall.Core;
 
 public class ScryfallCardSnapshotCollector : ICardSnapshotCollector
 {

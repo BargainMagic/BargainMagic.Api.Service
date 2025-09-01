@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace BargainMagic.Capture.Scryfall.Abstractions.Models;
+namespace BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 
 /// <summary>
 /// A JSON model containing information about a card given by the Scryfall BulkData endpoint.

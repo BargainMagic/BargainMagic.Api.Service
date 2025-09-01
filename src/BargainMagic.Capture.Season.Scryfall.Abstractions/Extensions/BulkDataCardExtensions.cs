@@ -1,8 +1,8 @@
-﻿using BargainMagic.Capture.Scryfall.Abstractions.Extensions;
-using BargainMagic.Capture.Scryfall.Abstractions.Models;
+﻿using BargainMagic.Capture.Season.Scryfall.Abstractions.Extensions;
+using BargainMagic.Capture.Season.Scryfall.Abstractions.Models;
 using BargainMagic.Data.Abstractions.Entities;
 
-namespace BargainMagic.Capture.Scryfall.Core.Mappers;
+namespace BargainMagic.Capture.Season.Scryfall.Core.Mappers;
 
 /// <summary>
 /// Extension methods for a <see cref="BulkDataCard"/>.
